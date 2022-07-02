@@ -1,0 +1,36 @@
+.hero-container {
+    height: 80vh;
+    margin-top: 0px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+}
+
+.hero-text-container {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-btn {
+    margin-top: 4rem !important;
+}
+
+.hero-image-container {
+    width: 50%;
+    height: 100%;
+}
+
+.hero-image {
+    height: 100%;
+    width: 100%;
+}

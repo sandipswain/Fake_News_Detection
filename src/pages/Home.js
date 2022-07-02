@@ -1,7 +1,12 @@
 import React from "react";
+import HeroComponent from "./../components/HeroComponent";
 
 function Home() {
-  return <h1>Home</h1>;
+  return (
+    <div>
+      <HeroComponent />
+    </div>
+  );
 }
 
 export default Home;
