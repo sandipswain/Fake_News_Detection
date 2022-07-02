@@ -1,29 +1,33 @@
 import React from "react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="nav">
-      <a href="/" className="site-title">
+      <NavLink to="/" className="site-title">
         Fake News Detection
-      </a>
+      </NavLink>
       <ul>
-        <CustomLink href="/">Home</CustomLink>
-        <CustomLink href="/prediction">Prediction</CustomLink>
-        <CustomLink href="/about">About Us</CustomLink>
-        <CustomLink href="/contact">Contact Us</CustomLink>
+        <CustomLink to="/">Home</CustomLink>
+        <CustomLink to="/prediction">Prediction</CustomLink>
+        <CustomLink to="/about">About Us</CustomLink>
+        <CustomLink to="/contact">Contact Us</CustomLink>
       </ul>
     </nav>
   );
 }
 
-function CustomLink({ href, children, ...props }) {
-  const path = window.location.pathname;
+function CustomLink({ to, children, ...props }) {
   return (
-    <li className={path === href ? "active" : ""}>
-      <a href={href} {...props}>
+    <li className="navLink">
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "")}
+        to={to}
+        {...props}
+      >
         {children}
-      </a>
+      </NavLink>
     </li>
   );
 }

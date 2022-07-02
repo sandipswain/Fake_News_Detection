@@ -6,30 +6,17 @@ import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
-  let Component;
-  // console.log(window.location);
-  switch (window.location.pathname) {
-    case "/":
-      Component = Home;
-      break;
-    case "/prediction":
-      Component = Prediction;
-      break;
-    case "/about":
-      Component = About;
-      break;
-    case "/contact":
-      Component = ContactUs;
-      break;
-    default:
-      break;
-  }
   return (
     <div className="App">
       <>
         <Navbar />
         <div className="container">
-          <Component />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/prediction" element={<Prediction />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactUs />} />
+          </Routes>
         </div>
       </>
     </div>
