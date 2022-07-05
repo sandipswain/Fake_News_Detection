@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, TextField } from "@material-ui/core";
+import { Typography, TextField, Button } from "@material-ui/core";
 
 function Prediction() {
   return (
@@ -19,7 +19,10 @@ function Prediction() {
         <Typography variant="h5" className="prediction-input-heading">
           Enter News Headlines Here
         </Typography>
-        <TextField variant="filled" autoComplete="off" fullWidth />
+        <TextField variant="filled" autoComplete="off" fullWidth size="small" />
+        <Button variant="outlined" color="primary">
+          Submit
+        </Button>
       </div>
     </>
   );
